@@ -1,0 +1,50 @@
+<!-- 1. What is Virtual DOM -->
+The Virtual DOM (VDOM) is an in-memory representation of Real DOM. The representation of a UI is kept in memory and synced with the "real" DOM. It's a step that happens between the render function being called and the displaying of elements on the screen. This entire process is called reconciliation. These two virtual doms will get compared with each other and will check for the new changes. this complete procedure is known as diffing algorithm. Now the new changes will be updated in your Real dom. this procedure is known as Recoinciliation.
+
+<!-- 2. What is SPA -->
+Single page application : Any web application , in which when you are clicking on any button or selecting option from navigation bar then if your page which means browser page is reloading then that means that application is your multi - page application . If it does not reload the browser page and just only updates the page without reloading then that application is known as Single Page application. When you create React application using CRA, (create-react-app boilerplate , developed by Facebook) it always create the application which will be Single page application.
+
+<!-- 3. What is difference between class and functional component -->
+Functional Components::
+A functional component is just a plain JavaScript function that accepts props as an argument and returns a React element.
+There is no render method used in functional components.
+Also known as Stateless components as they simply accept data and display them in some form, that they are mainly responsible for rendering UI.
+React lifecycle methods (for example, componentDidMount) cannot be used in functional components.
+Hooks can be easily used in functional components to make them Stateful. example: const [name,SetName]= React.useState(" ")
+Constructors are not used.
+
+Class Component:
+A class component requires you to extend from React. Component and create a render function which returns a React element.
+It must have the render() method returning JSX (which is syntactically similar to HTML)
+Also known as Stateful components because they implement logic and state.
+React lifecycle methods can be used inside class components (for example componentDidMount).
+It requires different syntax inside a class component to implement hooks. example: constructor(props) { super(props); this.state = {name: ‘ ‘} }
+Constructor are used as it needs to store state.
+
+<!-- 4. What does mean by state and its use in react? -->
+State of a component is an object that holds some information that may change over the lifetime of the component. We should always try to make our state as simple as possible and minimize the number of stateful components.
+
+class User extends React.Component {
+    constructor(props) {
+      super(props)
+
+      this.state = {
+        message: 'Welcome to React world'
+      }
+    }
+
+    render() {
+      return (
+        <div>
+          <h1>{this.state.message}</h1>
+        </div>
+      )
+    }
+  }
+
+<!-- 5. What is JSX and why do we use it instead of js? -->
+JSX stands for JavaScript XML. It allows us to write HTML in React. And JSX makes it easier to write and add HTML in React.
+JSX allows us to write HTML elements in JavaScript and place them in the DOM without any createElement()  and/or appendChild() methods.
+
+<!-- 6. What is package.json -->
+All npm packages contain a file, usually in the project root, called package.json - this file holds various metadata relevant to the project. This file is used to give information to npm that allows it to identify the project as well as handle the project's dependencies. It can also contain other metadata such as a project description, the version of the project in a particular distribution, license information, even configuration data - all of which can be vital to both npm and to the end users of the package. The package.json file is normally located at the root directory of a Node.js project.
